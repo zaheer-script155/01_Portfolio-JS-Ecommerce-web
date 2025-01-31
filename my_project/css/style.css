@@ -13,7 +13,7 @@
 /* <!-- <===sign-up-page start===> --> */
 /* <!-- <===Header start===> --> */
 
-.main-header {
+#main-header {
   border: 2px solid red;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@
   left: 0; */
 }
 
-.main-header a {
+#main-header a {
   color: white;
   font-weight: bold;
 }
@@ -49,20 +49,24 @@
 
 /* <!-- <===navbar start===> --> */
 
-.main-nav {
+#main-nav {
   display: flex;
   border: 2px solid red;
-  /* border-bottom: 1px solid rgb(202, 202, 202); */
+  border-bottom: 1px solid rgb(202, 202, 202);
   height: 60px;
   align-items: center;
   justify-content: space-around;
   /* position: relative; */
 }
-.main-logo {
+
+#main-nav p a {
+  border: 1px solid red;
   /* left: 50px; */
   /* position: absolute; */
   font-weight: bold;
   font-size: 25px;
+  color: black;
+  text-decoration: none;
 }
 
 .nav-list ul {
@@ -103,27 +107,33 @@
   background-color: whitesmoke;
   border-radius: 10px;
   padding: 8px;
-  padding-left: 20px;
 }
+
 .nav-search form {
-  gap: 10px;
   display: flex;
 }
+
 .nav-search form input {
   border: none;
   background-color: whitesmoke;
-  width: 170px;
+  width: 100%;
   outline: none;
 }
+
 .nav-search button {
   border: none;
   background: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.nav-search button img {
+  width: 100%;
 }
 
 /* <!-- <===main or hero section start===> --> */
 
-.main-container {
+#main-container {
   display: flex;
   border: 2px solid red;
   justify-content: space-between;
@@ -191,23 +201,26 @@
 
 /* <!-- <===footer start===> --> */
 
-.main-footer {
+#main-footer-container {
   margin-top: 50px;
   height: 350px;
   /* background-color: lightslategray; */
   background-color: black;
+  border: 2px solid green;
   display: flex;
   flex-direction: column;
   row-gap: 40px;
 }
 
-.main-footer-top {
+.main-footer {
   display: flex;
   border: 2px solid red;
   justify-content: space-around;
-  align-items: center;
+  padding-top: 60px;
+  flex-wrap: wrap;
 }
-.exclusive {
+
+.main-footer-col {
   color: white;
   display: flex;
   flex-direction: column;
@@ -217,91 +230,55 @@
 .exclusive p a {
   text-decoration: none;
   color: white;
+  font-weight: bold;
 }
+
 .exclusive div {
   border: 1px solid white;
   border-radius: 2px;
   display: flex;
-  background: none;
-  align-items: center;
   padding: 5px 5px 5px 5px;
 }
+
 .exclusive div input {
   background: none;
   border: none;
   outline: none;
   color: white;
 }
+
 .exclusive div button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.support {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.accounts {
-  margin-top: 35px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.accounts ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.accounts ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-.quickLink {
-  margin-top: 15px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
+.accounts ul,
 .quickLink ul {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
+
+.accounts ul li a,
 .quickLink ul li a {
   text-decoration: none;
   color: white;
 }
 
-.downloadApp {
-  margin-top: 60px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-.appAndPlayimg {
+.appAndPlay-img {
   display: flex;
   column-gap: 5px;
   align-items: center;
 }
-.appAndPlayimg div {
+
+.appAndPlay-img div {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
 }
-#google-click {
-  cursor: pointer;
-}
+
+#google-click,
 #app-click {
   cursor: pointer;
 }
@@ -327,4 +304,33 @@
 .copy-wright div {
   display: flex;
   opacity: 0.5;
+}
+
+.copy-wright div img {
+  width: 20px;
+}
+
+
+
+/* <!-- <===media query start===> --> */
+/* <!-- <===media query for ipad pro and under-1024px start===> --> */
+
+@media (max-width: 1024px) {
+  /* .nav-search form input {
+    display: none;
+  }
+  .nav-search form button {
+    display: flex;
+  }
+
+  .listStyle {
+    background-color: #e33636;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    flex-direction: row;
+    display: flex;
+  } */
 }
